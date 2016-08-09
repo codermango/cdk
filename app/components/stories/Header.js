@@ -8,7 +8,7 @@ const MuiStyles = () => getMuiTheme({
   textField: {
     textColor: '#528C9C',
     hintColor: '#528C9C',
-    borderColor: '#2b3b4c',
+    borderColor: 'transparent',
   }
 });
 
