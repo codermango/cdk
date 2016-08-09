@@ -35,6 +35,14 @@ class LineChart extends React.Component { // eslint-disable-line react/prefer-st
       {
         x: 2, y: 1, label: 1,
       },
+
+      {
+        x: 3, y: 1, label: 1,
+      },
+
+      {
+        x: 4, y: 2, label: 2,
+      },
     ],
     scale: 'linear',
   }
@@ -78,20 +86,20 @@ class LineChart extends React.Component { // eslint-disable-line react/prefer-st
         },
         labels: {
           display: 'none',
-          fill: '#FFF',
+          fill: '#000',
           fontSize: 12,
         },
       },
       xAxis: {
         axis: { stroke: 'none' },
         ticks: { stroke: 'none' },
-        tickLabels: { fill: '#FFF', fontSize: 10 },
+        tickLabels: { fill: '#000', fontSize: 10 },
       },
       yAxis: {
         axis: { stroke: 'none' },
         ticks: { stroke: 'none' },
-        grid: { stroke: '#FFF', opacity: 0.2 },
-        tickLabels: { fill: '#FFF', fontSize: 10 },
+        grid: { stroke: '#000', opacity: 0.2 },
+        tickLabels: { fill: '#000', fontSize: 10 },
       },
     };
   }
@@ -124,7 +132,7 @@ class LineChart extends React.Component { // eslint-disable-line react/prefer-st
           <VictoryAxis
             scale={scale}
             style={chartStyles.xAxis}
-            tickFormat={(x) => moment(x).format('MMMM')}
+            tickFormat={(x) => this.props.scale === 'time' ? moment(x).format('MMMM') : x}
           />
           <VictoryAxis
             dependentAxis
