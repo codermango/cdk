@@ -1,0 +1,20 @@
+.mainHeader { /* stylelint-ignore */
+  position: relative;
+  background-color: #23313d;
+  color: #FFF;
+  height: 3em;
+  line-height: 3em;
+  text-shadow: 2px 2px 4px #23313d;
+  box-shadow: 0 3px 5px -2px #000;
+}
+
+.logoWrapper {
+  display: inline-block;
+  height: 100%;
+}
+
+.navigation {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+}

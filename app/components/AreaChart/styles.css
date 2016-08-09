@@ -1,0 +1,24 @@
+.areaChart {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: absolute;
+}
+
+.chart {
+  height: 100%;
+}
+
+.stop1 {
+  stop-color: #039BE5;
+}
+
+.stop2 {
+  stop-color: #039BE5;
+  stop-opacity: 0.5;
+}
+
+.stop3 {
+  stop-color: #039BE5;
+  stop-opacity: 0;
+}

@@ -1,0 +1,34 @@
+.subHeader { /* stylelint-ignore */
+  height: 2em;
+  line-height: 1.6em;
+  background-color: #2b3b4c;
+}
+
+.left {
+  display: inline-block;
+}
+
+.right {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  color: #528C9C;
+}
+
+.priceModel {
+  padding: 0 1em;
+  font-size: .7em;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.dateInput {
+  color: #528C9C;
+  outline: none;
+  width: 6em;
+  font-size: 0.7em;
+}
+
+.dateField {
+  color: #FFF;
+}

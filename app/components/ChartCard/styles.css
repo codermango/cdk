@@ -1,0 +1,32 @@
+.chartCard {
+  flex: 1;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 1em;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.body {
+  flex: 1;
+  position: relative;
+}
+
+.header {
+  line-height: 1em;
+}
+
+.chartHeader {
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.chartDescription {
+  font-weight: 300;
+  font-size: 0.6em;
+}
+
+.loading {
+  text-align: center;
+}
