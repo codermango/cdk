@@ -7,7 +7,7 @@
 import React from 'react';
 import moment from 'moment';
 import { VictoryChart, VictoryAxis, VictoryLine, VictoryScatter } from 'victory';
-import ChartLabel from 'components/ChartLabel';
+import ChartLabel from '../ChartLabel';
 
 import styles from './styles.css';
 
@@ -37,6 +37,21 @@ class StackedLineChart extends React.Component {
             x: 1420066800000,
             y: 18,
             label: 18,
+          },
+          {
+            x: 1422745200000,
+            y: 20,
+            label: 20
+          },
+          {
+            x: 1425164400000,
+            y: 17,
+            label: 17
+          },
+          {
+            x: 1427839200000,
+            y: 13,
+            label: 13
           },
         ],
         count: 450592,
@@ -104,20 +119,20 @@ class StackedLineChart extends React.Component {
           strokeWidth: 2,
         },
         labels: {
-          fill: 'white',
+          fill: '#000',
           padding: 12,
         },
       },
       xAxis: {
-        axis: { stroke: '#FFF' },
+        axis: { stroke: '#000' },
         ticks: { stroke: 'none' },
-        tickLabels: { fill: '#FFF', fontSize: 10 },
+        tickLabels: { fill: '#000', fontSize: 10 },
       },
       yAxis: {
         axis: { stroke: 'none' },
         ticks: { stroke: 'none' },
-        grid: { stroke: '#FFF', opacity: 0.2 },
-        tickLabels: { fill: '#FFF', fontSize: 10 },
+        grid: { stroke: '#000', opacity: 0.2 },
+        tickLabels: { fill: '#000', fontSize: 10 },
       },
     };
   }
@@ -174,7 +189,7 @@ class StackedLineChart extends React.Component {
           >
             <VictoryAxis
               scale={scale}
-              tickCount={data.length}
+              tickCount={data.length > 1 ? data.length : 5}
               tickFormat={(x) => moment(x).format('MMMM')}
               style={chartStyles.xAxis}
             />
@@ -190,7 +205,7 @@ class StackedLineChart extends React.Component {
                 key={d.name}
                 data={d.data}
                 standalone={false}
-                style={{ data: { fill: d.color, display: this.blackListed(d.name) ? 'block' : 'none' }, labels: { fill: '#FFF', padding: 12, fontSize: 16 } }}
+                style={{ data: { fill: d.color, display: this.blackListed(d.name) ? 'block' : 'none' }, labels: { fill: '#000', padding: 12, fontSize: 16 } }}
                 labelComponent={<ChartLabel />}
                 events={[
                   {
@@ -205,7 +220,7 @@ class StackedLineChart extends React.Component {
                           {
                             mutation: (props) => (
                               { style:
-                                Object.assign({}, props.style, { fill: '#FFF' }),
+                                Object.assign({}, props.style, { fill: '#000' }),
                               }
                             ),
                           },
