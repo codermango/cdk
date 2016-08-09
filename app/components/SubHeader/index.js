@@ -34,9 +34,9 @@ class SubHeader extends React.Component {
         </div>
         <div className={styles.right}>
           <span className={styles.priceModel}>Price model</span>
-          <DatePicker container="inline" style={{ display: 'inline-block' }} textFieldStyle={{ width: '75px', height: '30px', lineHeight: '12px', fontSize: '12px', paddingLeft: '5px', paddingRight: '5px' }} className={styles.dateField} defaultDate={startDate} />
-          <span style={{fontSize: '12px'}}>to</span>
-          <DatePicker container="inline" style={{ display: 'inline-block' }} textFieldStyle={{ width: '75px', height: '30px', lineHeight: '12px', fontSize: '12px', paddingLeft: '5px', paddingRight: '5px' }} className={styles.dateField} defaultDate={endDate} />
+          <DatePicker container="inline" style={{ display: 'inline-block' }} textFieldStyle={{ width: '65px', height: '30px', lineHeight: '12px', fontSize: '12px', paddingLeft: '5px', paddingRight: '10px' }} className={styles.dateField} defaultDate={startDate} />
+          <span style={{fontSize: '12px', color: '#FFF', padding: '0 10px' }}>to</span>
+          <DatePicker container="inline" style={{ display: 'inline-block' }} textFieldStyle={{ width: '65px', height: '30px', lineHeight: '12px', fontSize: '12px', paddingLeft: '5px', paddingRight: '10px' }} className={styles.dateField} defaultDate={endDate} />
           {/*<DatePicker
             className={styles.dateInput}
             dateFormat="DD/MM/YYYY"
