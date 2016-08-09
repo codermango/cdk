@@ -34,6 +34,9 @@ class BarChart extends React.Component { // eslint-disable-line react/prefer-sta
       {
         x: 2, y: 1, label: 1,
       },
+      {
+        x: 3, y: 3, label: 3,
+      },
     ],
     scale: 'linear',
   }
@@ -79,20 +82,20 @@ class BarChart extends React.Component { // eslint-disable-line react/prefer-sta
         },
         labels: {
           display: 'none',
-          fill: '#FFF',
+          fill: '#000',
           fontSize: 12,
         },
       },
       xAxis: {
         axis: { stroke: 'none' },
         ticks: { stroke: 'none' },
-        tickLabels: { fill: '#FFF', fontSize: 10 },
+        tickLabels: { fill: '#000', fontSize: 10 },
       },
       yAxis: {
         axis: { stroke: 'none' },
         ticks: { stroke: 'none' },
-        grid: { stroke: '#FFF', opacity: 0.2 },
-        tickLabels: { fill: '#FFF', fontSize: 10 },
+        grid: { stroke: '#000', opacity: 0.2 },
+        tickLabels: { fill: '#000', fontSize: 10 },
       },
     };
   }
@@ -108,7 +111,7 @@ class BarChart extends React.Component { // eslint-disable-line react/prefer-sta
         <VictoryChart
           domainPadding={{ x: 10 }}
           padding={{
-            top: 15,
+            top: 50,
             bottom: 40,
             left: 40,
             right: 40,
