@@ -15,6 +15,9 @@ import styles from './styles.css';
 import SubNavigation from '../SubNavigation';
 
 class SubHeader extends React.Component {
+  static propTypes = {
+    routes: React.PropTypes.array,
+  };
 
   constructor(props) {
     super(props);
@@ -35,9 +38,10 @@ class SubHeader extends React.Component {
         <div className={styles.right}>
           <span className={styles.priceModel}>Price model</span>
           <DatePicker container="inline" style={{ display: 'inline-block' }} textFieldStyle={{ width: '65px', height: '30px', lineHeight: '12px', fontSize: '12px', paddingLeft: '5px', paddingRight: '10px' }} className={styles.dateField} defaultDate={startDate} />
-          <span style={{fontSize: '12px', color: '#FFF', padding: '0 10px' }}>to</span>
+          <span style={{ fontSize: '12px', color: '#FFF', padding: '0 10px' }}>to</span>
           <DatePicker container="inline" style={{ display: 'inline-block' }} textFieldStyle={{ width: '65px', height: '30px', lineHeight: '12px', fontSize: '12px', paddingLeft: '5px', paddingRight: '10px' }} className={styles.dateField} defaultDate={endDate} />
-          {/*<DatePicker
+          {/*
+          <DatePicker
             className={styles.dateInput}
             dateFormat="DD/MM/YYYY"
             selected={this.state.startDate}
@@ -56,7 +60,8 @@ class SubHeader extends React.Component {
             popoverAttachment='bottom center'
             popoverTargetAttachment='top left'
             popoverTargetOffset='10px 10px'
-          />*/}
+          />
+          */}
         </div>
       </div>
     );

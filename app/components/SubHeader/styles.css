@@ -1,7 +1,7 @@
 .subHeader { /* stylelint-ignore */
   height: 2em;
   line-height: 1.6em;
-  background-color: #2b3b4c;
+  background-color: #2B3B4C;
 }
 
 .left {
@@ -17,7 +17,7 @@
 
 .priceModel {
   padding: 0 1em;
-  font-size: .7em;
+  font-size: 0.7em;
   cursor: pointer;
   text-transform: uppercase;
 }

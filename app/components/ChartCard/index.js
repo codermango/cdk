@@ -45,7 +45,7 @@ class ChartCard extends React.Component { // eslint-disable-line react/prefer-st
   }
 
   resize() {
-    this.setState({ dimension: this.refs.body.getBoundingClientRect() });
+    this.setState({ dimension: this.body.getBoundingClientRect() });
   }
 
   render() {
@@ -57,7 +57,7 @@ class ChartCard extends React.Component { // eslint-disable-line react/prefer-st
           <h3 className={styles.chartHeader}>{title}</h3>
           <span className={styles.chartDescription}>{description}</span>
         </div>
-        <div className={styles.body} ref="body" style={{ height: bodyHeight }}>
+        <div className={styles.body} ref={body => { this.body = body; }} style={{ height: bodyHeight }}>
           {loading ? <div className={styles.loading}><CircularProgress /></div> : <div {...this.props} blacklist={this.state.blacklist} />}
         </div>
       </div>

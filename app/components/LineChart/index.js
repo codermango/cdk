@@ -66,7 +66,7 @@ class LineChart extends React.Component { // eslint-disable-line react/prefer-st
   }
 
   resize() {
-    this.setState({ dimension: this.refs.chart.getBoundingClientRect() });
+    this.setState({ dimension: this.chart.getBoundingClientRect() });
   }
 
   chartStyles() {
@@ -111,7 +111,7 @@ class LineChart extends React.Component { // eslint-disable-line react/prefer-st
     const chartHeight = this.state.dimension.height > 0 ? this.state.dimension.height : height;
 
     return (
-      <div ref="chart" className={styles.lineChart}>
+      <div ref={chart => { this.chart = chart; }} className={styles.lineChart}>
         <VictoryChart
           domainPadding={{ x: 20 }}
           width={chartWidth}
@@ -132,7 +132,7 @@ class LineChart extends React.Component { // eslint-disable-line react/prefer-st
           <VictoryAxis
             scale={scale}
             style={chartStyles.xAxis}
-            tickFormat={(x) => this.props.scale === 'time' ? moment(x).format('MMMM') : x}
+            tickFormat={(x) => (this.props.scale === 'time' ? moment(x).format('MMMM') : x)}
           />
           <VictoryAxis
             dependentAxis

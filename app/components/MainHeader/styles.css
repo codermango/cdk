@@ -1,10 +1,10 @@
 .mainHeader { /* stylelint-ignore */
   position: relative;
-  background-color: #23313d;
+  background-color: #23313D;
   color: #FFF;
   height: 3em;
   line-height: 3em;
-  text-shadow: 2px 2px 4px #23313d;
+  text-shadow: 2px 2px 4px #23313D;
   box-shadow: 0 3px 5px -2px #000;
 }
 

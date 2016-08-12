@@ -1,0 +1,39 @@
+.movieList { /* stylelint-ignore */
+  padding: 10px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.movieListItem {
+  padding: 5px;
+  display: flex;
+}
+
+.poster {
+  flex: 1;
+  height: 100%;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}
+
+.content {
+  flex: 3;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 1.7vw;
+}
+
+.desc {
+  color: #6E6E6E;
+  font-size: 1vw;
+}

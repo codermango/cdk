@@ -24,4 +24,8 @@ function Navigation(props) {
   );
 }
 
+Navigation.propTypes = {
+  routes: React.PropTypes.array,
+};
+
 export default Navigation;

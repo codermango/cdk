@@ -19,7 +19,7 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
     super(props);
     this.state = {
       topNav: 1,
-    }
+    };
   }
 
   render() {

@@ -60,7 +60,7 @@ class AreaChart extends React.Component { // eslint-disable-line react/prefer-st
   }
 
   resize() {
-    this.setState({ dimension: this.refs.chart.getBoundingClientRect() });
+    this.setState({ dimension: this.chart.getBoundingClientRect() });
   }
 
   chartStyles() {
@@ -122,7 +122,7 @@ class AreaChart extends React.Component { // eslint-disable-line react/prefer-st
     const chartWidth = this.state.dimension.width > 0 ? this.state.dimension.width : width;
     const chartHeight = this.state.dimension.height > 0 ? this.state.dimension.height : height;
     return (
-      <div ref="chart" className={styles.areaChart}>
+      <div ref={(chart) => { this.chart = chart; }} className={styles.areaChart}>
         <VictoryChart
           width={chartWidth}
           height={chartHeight}
@@ -142,7 +142,7 @@ class AreaChart extends React.Component { // eslint-disable-line react/prefer-st
           <VictoryAxis
             scale={scale}
             tickCount={data.length}
-            tickFormat={(x) => this.props.scale === 'time' ? moment(x).format('MMMM') : x}
+            tickFormat={(x) => (this.props.scale === 'time' ? moment(x).format('MMMM') : x)}
             style={chartStyles.xAxis}
           />
           <VictoryAxis

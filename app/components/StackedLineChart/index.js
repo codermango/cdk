@@ -41,17 +41,17 @@ class StackedLineChart extends React.Component {
           {
             x: 1422745200000,
             y: 20,
-            label: 20
+            label: 20,
           },
           {
             x: 1425164400000,
             y: 17,
-            label: 17
+            label: 17,
           },
           {
             x: 1427839200000,
             y: 13,
-            label: 13
+            label: 13,
           },
         ],
         count: 450592,
@@ -87,7 +87,7 @@ class StackedLineChart extends React.Component {
   }
 
   resize() {
-    this.setState({ dimension: this.refs.chart.getBoundingClientRect() });
+    this.setState({ dimension: this.chart.getBoundingClientRect() });
   }
 
   chartDomain() {
@@ -167,7 +167,7 @@ class StackedLineChart extends React.Component {
     const chartWidth = this.state.dimension.width > 0 ? this.state.dimension.width : width;
     const chartHeight = this.state.dimension.height > 0 ? this.state.dimension.height : height;
     return (
-      <div ref="chart" className={styles.stackedLineChart}>
+      <div ref={chart => { this.chart = chart; }} className={styles.stackedLineChart}>
         {data ?
           <div style={{ fontSize: 10, marginTop: '5px', position: 'absolute' }}>
             {data.map(stack =>

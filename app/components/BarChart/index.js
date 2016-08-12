@@ -60,7 +60,7 @@ class BarChart extends React.Component { // eslint-disable-line react/prefer-sta
   }
 
   resize() {
-    this.setState({ dimension: this.refs.chart.getBoundingClientRect() });
+    this.setState({ dimension: this.chart.getBoundingClientRect() });
   }
 
   chartStyles() {
@@ -107,7 +107,7 @@ class BarChart extends React.Component { // eslint-disable-line react/prefer-sta
     const chartHeight = this.state.dimension.height > 0 ? this.state.dimension.height : height;
 
     return (
-      <div ref="chart" className={styles.barChart}>
+      <div ref={chart => { this.chart = chart; }} className={styles.barChart}>
         <VictoryChart
           domainPadding={{ x: 10 }}
           padding={{

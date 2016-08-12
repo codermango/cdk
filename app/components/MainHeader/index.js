@@ -25,4 +25,8 @@ function MainHeader(props) {
   );
 }
 
+MainHeader.propTypes = {
+  routes: React.PropTypes.array,
+};
+
 export default MainHeader;

@@ -16,15 +16,21 @@ function SubNavigation(props) {
         {props.routes.map(route =>
           <li className={styles.navItem}>{route.name}</li>
         )}
-        {/*<li className={styles.navItem}>Personas</li>
+        {/*
+        <li className={styles.navItem}>Personas</li>
         <li className={styles.navItem}>Viewers</li>
         <li className={styles.navItem}>Content</li>
         <li className={styles.navItem}>Revenue</li>
         <li className={styles.navItem}>Device</li>
-        <li className={styles.navItem}>Region</li>*/}
+        <li className={styles.navItem}>Region</li>
+        */}
       </ul>
     </div>
   );
 }
+
+SubNavigation.propTypes = {
+  routes: React.PropTypes.array,
+};
 
 export default SubNavigation;
