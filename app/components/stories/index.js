@@ -7,3 +7,4 @@ import './LineChart';
 import './StackedLineChart';
 import './MovieList';
 import './ChartBox';
+import './DonutCard';
