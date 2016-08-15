@@ -8,3 +8,5 @@ import './StackedLineChart';
 import './MovieList';
 import './ChartBox';
 import './DonutCard';
+import './TextCell';
+import './PosterCell';

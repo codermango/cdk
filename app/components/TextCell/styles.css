@@ -1,0 +1,12 @@
+.textCell { /* stylelint-ignore */
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px 5px;
+  color: #ADB6BB;
+  font-size: 0.8vw;
+  height: 100%;
+  background-color: #FBFCFE;
+}

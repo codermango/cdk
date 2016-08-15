@@ -1,0 +1,9 @@
+.posterCell { /* stylelint-ignore */
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.poster {
+  height: 100%;
+}
