@@ -1,0 +1,18 @@
+.personaTableHeader { /* stylelint-ignore */
+  display: flex;
+  justify-content: space-around;
+  height: 80px;
+  background-color: #FBFCFE;
+  overflow: hidden;
+  border-top: 1px solid #CBCACF;
+  border-bottom: 1px solid #CBCACF;
+}
+
+.colHeader {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  color: #346692;
+}
