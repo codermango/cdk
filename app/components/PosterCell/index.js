@@ -13,13 +13,13 @@ function PosterCell(props) {
   return (
     <div className={styles.posterCell}>
       <div className={styles.poster}>
-        <img src={props.data[0]} alt="img" />
+        <img className={styles.img} src={props.data[0]} alt="img" />
       </div>
       <div className={styles.poster}>
-        <img src={props.data[1]} alt="img" />
+        <img className={styles.img} src={props.data[1]} alt="img" />
       </div>
       <div className={styles.poster}>
-        <img src={props.data[2]} alt="img" />
+        <img className={styles.img} src={props.data[2]} alt="img" />
       </div>
     </div>
   );

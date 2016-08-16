@@ -12,3 +12,4 @@ import './TextCell';
 import './PosterCell';
 import './FormatTextCell';
 import './IconCell';
+import './PersonaRow';

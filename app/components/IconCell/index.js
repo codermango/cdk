@@ -13,13 +13,13 @@ function IconCell(props) {
   const { data } = props;
   return (
     <div className={styles.iconCell}>
-      <img src={data.icon} alt="icon" />
+      <img className={styles.img} src={data} alt="icon" />
     </div>
   );
 }
 
 IconCell.propTypes = {
-  data: React.PropTypes.object,
+  data: React.PropTypes.string,
 };
 
 export default IconCell;

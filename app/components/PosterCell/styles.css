@@ -1,9 +1,14 @@
 .posterCell { /* stylelint-ignore */
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
   height: 100%;
 }
 
 .poster {
-  height: 100%;
+  height: 90%;
+}
+
+.img {
+  width: inherit;
 }

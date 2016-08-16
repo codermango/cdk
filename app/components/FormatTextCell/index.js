@@ -28,7 +28,7 @@ function FormatTextCell(props) {
   } else if (type === 'currency') {
     mainTextDiv = (
       <div className={styles.mainText}>
-        <span className={styles.number}>{data.amount}</span>sek
+        <span className={styles.number}>{data}</span>sek
       </div>
     );
   }
@@ -47,7 +47,10 @@ function FormatTextCell(props) {
 
 FormatTextCell.propTypes = {
   type: React.PropTypes.string,
-  data: React.PropTypes.object,
+  data: React.PropTypes.oneOfType([
+    React.PropTypes.number,
+    React.PropTypes.object,
+  ]),
 };
 
 export default FormatTextCell;

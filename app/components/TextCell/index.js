@@ -12,7 +12,7 @@ function TextCell(props) {
   const { data, type } = props;
   let contentDiv = '';
   if (type === 'text') {
-    contentDiv = (<div>{data.text}</div>);
+    contentDiv = (<div>{data}</div>);
   } else if (type === 'time') {
     contentDiv = (
       <div>
@@ -22,8 +22,8 @@ function TextCell(props) {
     );
   } else if (type === 'percentage') {
     contentDiv = (
-      <div style={{ fontSize: '3vw', color: '#000' }} >
-        {data.percentage}%
+      <div style={{ fontSize: '2em', color: '#000' }} >
+        {data}%
       </div>
     );
   }
@@ -35,7 +35,11 @@ function TextCell(props) {
 }
 
 TextCell.propTypes = {
-  data: React.PropTypes.object,
+  data: React.PropTypes.oneOfType([
+    React.PropTypes.object,
+    React.PropTypes.number,
+    React.PropTypes.string,
+  ]),
   type: React.PropTypes.string,
 };
 

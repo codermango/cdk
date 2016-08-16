@@ -4,14 +4,12 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 20px 5px;
   color: #ADB6BB;
   height: 100%;
-  background-color: #FBFCFE;
 }
 
 .icon {
-  width: 2vw;
+  width: 2em;
   margin-right: 5px;
 }
 
@@ -25,13 +23,13 @@
 }
 
 .mainText {
-  font-size: 1.4vw;
+  font-size: 1em;
 }
 
 .subText {
-  font-size: 1.2vw;
+  font-size: 0.8em;
 }
 
 .number {
-  font-size: 2vw;
+  font-size: 1.4em;
 }
