@@ -13,3 +13,4 @@ import './PosterCell';
 import './FormatTextCell';
 import './IconCell';
 import './PersonaRow';
+import './PersonaTableHeader';

@@ -7,9 +7,7 @@ import { storiesOf } from '@kadira/storybook';
 
 import happyIcon from './images/happy_smiley.png';
 
-const data = {
-  icon: happyIcon,
-};
+const data = happyIcon;
 
 storiesOf('IconCell', module)
   .add('default', () => (

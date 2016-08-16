@@ -5,22 +5,16 @@ import React from 'react';
 import TextCell from '../TextCell';
 import { storiesOf } from '@kadira/storybook';
 
-const data1 = {
-  text: 'Mainstream action, advanture, comedy with high speed and mixed colors',
-};
+const data1 = 'Mainstream action, advanture, comedy with high speed and mixed colors';
 
-const data2 = {
-  text: 'iPad',
-};
+const data2 = 'iPad';
 
 const data3 = {
   weekday: 17.19,
   weekend: 20.07,
 };
 
-const data4 = {
-  percentage: 34,
-};
+const data4 = 43;
 
 storiesOf('TextCell', module)
   .add('description', () => (

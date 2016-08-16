@@ -10,9 +10,7 @@ const timeData = {
   sec: 13,
 };
 
-const currencyData = {
-  amount: 45,
-};
+const currencyData = 45;
 
 storiesOf('FormatTextCell', module)
   .add('with icon', () => (
