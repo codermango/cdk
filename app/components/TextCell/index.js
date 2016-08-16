@@ -11,7 +11,7 @@ import styles from './styles.css';
 function TextCell(props) {
   const { data, type } = props;
   let contentDiv = '';
-  if (type === "text") {
+  if (type === 'text') {
     contentDiv = (<div>{data.text}</div>);
   } else if (type === 'time') {
     contentDiv = (
