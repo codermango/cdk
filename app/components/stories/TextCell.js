@@ -13,14 +13,33 @@ const data2 = {
   text: 'iPad',
 };
 
+const data3 = {
+  weekday: 17.19,
+  weekend: 20.07,
+};
+
+const data4 = {
+  percentage: 34,
+};
+
 storiesOf('TextCell', module)
   .add('description', () => (
     <div style={{ width: '300px', height: '100px' }}>
-      <TextCell data={data1} />
+      <TextCell data={data1} type="text" />
     </div>
   ))
   .add('device', () => (
     <div style={{ width: '300px', height: '100px' }}>
-      <TextCell data={data2} />
+      <TextCell data={data2} type="text" />
+    </div>
+  ))
+  .add('prime time', () => (
+    <div style={{ width: '300px', height: '100px' }}>
+      <TextCell data={data3} type="time" />
+    </div>
+  ))
+  .add('size', () => (
+    <div style={{ width: '300px', height: '100px' }}>
+      <TextCell data={data4} type="percentage" />
     </div>
   ));
