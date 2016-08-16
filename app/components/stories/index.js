@@ -10,3 +10,4 @@ import './ChartBox';
 import './DonutCard';
 import './TextCell';
 import './PosterCell';
+import './FormatTextCell';
