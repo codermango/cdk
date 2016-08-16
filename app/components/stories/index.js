@@ -14,3 +14,4 @@ import './FormatTextCell';
 import './IconCell';
 import './PersonaRow';
 import './PersonaTableHeader';
+import './PersonaTable';

@@ -15,8 +15,9 @@ import styles from './styles.css';
 
 function PersonaRow(props) {
   const { data } = props;
+  const className = props.className ? props.className : styles.personaRow;
   return (
-    <div className={styles.personaRow}>
+    <div className={className}>
       <div className={styles.cellWrapper} style={{ width: '150px' }}>
         <TextCell data={data.size} type="percentage" />
       </div>
@@ -47,6 +48,7 @@ function PersonaRow(props) {
 
 PersonaRow.propTypes = {
   data: React.PropTypes.object,
+  className: React.PropTypes.string,
 };
 
 export default PersonaRow;
