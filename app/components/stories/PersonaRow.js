@@ -14,10 +14,14 @@ import happyIcon from './images/happy_smiley.png';
 const data = {
   size: 34,
   status: happyIcon,
-  arpu: 45,
+  arpu: {
+    amount: 45,
+    change: 12,
+  },
   avgViewingTime: {
     min: 123,
     sec: 23,
+    change: -11,
   },
   posters: [poster1, poster2, poster3],
   desc: 'Mainstream action, advanture, comedy with high speed and mixed colors',

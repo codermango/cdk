@@ -12,6 +12,8 @@ import clockIcon from '../stories/images/clock.png';
 
 function FormatTextCell(props) {
   const { type, data } = props;
+  const percentageText = data.change > 0 ? `+${data.change}%` : `${data.change}%`;
+  const percentageColor = data.change > 0 ? '#3FA650' : '#D73938';
   let iconDiv = '';
   let mainTextDiv = '';
   if (type === 'time') {
@@ -28,7 +30,7 @@ function FormatTextCell(props) {
   } else if (type === 'currency') {
     mainTextDiv = (
       <div className={styles.mainText}>
-        <span className={styles.number}>{data}</span>sek
+        <span className={styles.number}>{data.amount}</span>sek
       </div>
     );
   }
@@ -37,8 +39,8 @@ function FormatTextCell(props) {
       {iconDiv}
       <div className={styles.text}>
         {mainTextDiv}
-        <div className={styles.subText}>
-          +11%
+        <div className={styles.subText} style={{ color: percentageColor }}>
+          {percentageText}
         </div>
       </div>
     </div>

@@ -8,9 +8,13 @@ import { storiesOf } from '@kadira/storybook';
 const timeData = {
   min: 34,
   sec: 13,
+  change: -11,
 };
 
-const currencyData = 45;
+const currencyData = {
+  amount: 45,
+  change: 12,
+};
 
 storiesOf('FormatTextCell', module)
   .add('with icon', () => (
