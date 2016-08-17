@@ -7,7 +7,7 @@ import { storiesOf } from '@kadira/storybook';
 
 storiesOf('MovieList', module)
   .add('default', () => (
-    <div style={{ width: '500px' }}>
+    <div style={{ width: '30%', backgroundColor: 'gainsboro' }}>
       <MovieList />
     </div>
   ));

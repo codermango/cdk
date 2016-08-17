@@ -1,25 +1,29 @@
 .chartCard {
   flex: 1;
-  border-radius: 5px;
   margin: 5px;
-  padding: 1em;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 0 10px #888;
 }
 
 .body {
+  padding: 15px 20px;
   flex: 1;
   position: relative;
+  overflow: auto;
 }
 
 .header {
+  background-color: #F8F8F8;
+  padding: 15px 20px;
   line-height: 1em;
 }
 
 .chartHeader {
   text-transform: uppercase;
   font-weight: 400;
+  margin: 0;
 }
 
 .chartDescription {
