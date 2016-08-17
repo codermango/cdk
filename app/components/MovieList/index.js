@@ -71,7 +71,7 @@ class MovieList extends React.Component {
           movies.map(movie => (
             <div key={movie.vionelID} className={styles.movieListItem}>
               <div className={styles.poster}>
-                <img src={movie.thumbnailUrl} alt={movie.name} />
+                <img className={styles.img} src={movie.thumbnailUrl} alt={movie.name} />
               </div>
               <div className={styles.content}>
                 <div className={styles.name}>{movie.name}</div>

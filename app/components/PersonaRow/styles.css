@@ -1,0 +1,14 @@
+.personaRow { /* stylelint-ignore */
+  display: flex;
+  justify-content: space-around;
+  height: 5vw;
+  overflow: hidden;
+  border-bottom: 1px solid #CBCACF;
+}
+
+.cellWrapper {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
