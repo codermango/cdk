@@ -3,26 +3,35 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  background: gainsboro;
 }
 
 .movieListItem {
-  padding: 5px;
+  padding: 2%;
   display: flex;
 }
 
 .poster {
-  flex: 1;
-  height: 100%;
+  height: 0;
+  width: 20%;
+  padding-bottom: 30%;
+  background-size: cover;
+  background-color: grey;
+  position: relative;
 }
 
 .img {
   height: 100%;
   width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .content {
-  flex: 3;
-  padding: 10px 20px;
+  box-sizing: border-box;
+  width: 80%;
+  padding: 0 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -30,10 +39,11 @@
 
 .name {
   font-weight: bold;
-  font-size: 1.7vw;
+  font-size: 1.5vw;
 }
 
 .desc {
+  padding: 0 0 2%;
   color: #6E6E6E;
   font-size: 1vw;
 }
