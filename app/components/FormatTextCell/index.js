@@ -19,7 +19,7 @@ function FormatTextCell(props) {
   if (type === 'time') {
     iconDiv = (
       <div className={styles.icon}>
-        <img src={clockIcon} alt="clock" />
+        <img className={styles.img} src={clockIcon} alt="clock" />
       </div>
     );
     mainTextDiv = (

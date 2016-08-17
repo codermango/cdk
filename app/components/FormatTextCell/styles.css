@@ -9,7 +9,7 @@
 }
 
 .icon {
-  width: 2em;
+  width: 1.6vw;
 }
 
 .text {
@@ -21,13 +21,17 @@
 }
 
 .mainText {
-  font-size: 1em;
+  font-size: 1.5vw;
 }
 
 .subText {
-  font-size: 0.8em;
+  font-size: 1.5vw;
 }
 
 .number {
-  font-size: 1.4em;
+  font-size: 2vw;
+}
+
+.img {
+  width: 100%;
 }

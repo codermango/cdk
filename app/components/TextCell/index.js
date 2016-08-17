@@ -12,7 +12,7 @@ function TextCell(props) {
   const { data, type } = props;
   let contentDiv = '';
   if (type === 'text') {
-    contentDiv = (<div>{data}</div>);
+    contentDiv = (<div className={styles.text}>{data}</div>);
   } else if (type === 'time') {
     contentDiv = (
       <div>
@@ -22,7 +22,7 @@ function TextCell(props) {
     );
   } else if (type === 'percentage') {
     contentDiv = (
-      <div style={{ fontSize: '2em', color: '#000' }} >
+      <div className={styles.percentage}>
         {data}%
       </div>
     );

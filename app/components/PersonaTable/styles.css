@@ -4,7 +4,7 @@
 .personaRow:nth-of-type(even) {
   display: flex;
   justify-content: space-around;
-  height: 100px;
+  height: 5vw;
   background-color: #FBFCFE;
   overflow: hidden;
   border-bottom: 1px solid #CBCACF;
@@ -13,7 +13,7 @@
 .personaRow:nth-of-type(odd) {
   display: flex;
   justify-content: space-around;
-  height: 100px;
+  height: 5vw;
   overflow: hidden;
   border-bottom: 1px solid #CBCACF;
 }
