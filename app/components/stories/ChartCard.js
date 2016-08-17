@@ -4,6 +4,7 @@ import AreaChart from '../AreaChart';
 import BarChart from '../BarChart';
 import LineChart from '../LineChart';
 import StackedLineChart from '../StackedLineChart';
+import MovieList from '../MovieList';
 import { storiesOf } from '@kadira/storybook';
 
 storiesOf('ChartCard', module)
@@ -50,6 +51,13 @@ storiesOf('ChartCard', module)
       </ChartCard>
       <ChartCard height={200}>
         <StackedLineChart />
+      </ChartCard>
+    </div>
+  ))
+  .add('MovieList view', () => (
+    <div style={{ display: 'flex', width: '30%' }}>
+      <ChartCard>
+        <MovieList />
       </ChartCard>
     </div>
   ));

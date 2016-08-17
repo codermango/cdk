@@ -1,9 +1,6 @@
 .movieList { /* stylelint-ignore */
-  padding: 10px;
-  height: 100%;
   display: flex;
   flex-direction: column;
-  background: gainsboro;
 }
 
 .movieListItem {
@@ -16,7 +13,6 @@
   width: 20%;
   padding-bottom: 30%;
   background-size: cover;
-  background-color: grey;
   position: relative;
 }
 
