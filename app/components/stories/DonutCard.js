@@ -7,7 +7,7 @@ import { storiesOf } from '@kadira/storybook';
 
 storiesOf('DonutCard', module)
   .add('default', () => (
-    <div style={{ width: '500px', height: '400px' }}>
+    <div style={{ position: 'absolute', width: '500px', height: '200px' }}>
       <DonutCard />
     </div>
   ));

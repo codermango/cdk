@@ -32,13 +32,28 @@ class DonutCard extends React.Component { // eslint-disable-line react/prefer-st
       textData: false,
       textColor: false,
     };
+    this.resize = this.resize.bind(this);
   }
   componentDidMount() {
+
+    window.addEventListener('resize', this.resize, false);
     const { data } = this.props;
     data.sort((a, b) => a.y < b.y);
     const chartHeight = this.itemDiv.getBoundingClientRect().height;
+    console.log(this.itemDiv);
+    console.log(this.itemDiv.offsetHeight);
     const colors = this.generateColors(this.props.data.length);
     this.initState(chartHeight, colors, data);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.resize, false);
+  }
+
+  resize() {
+    this.setState({
+      svgHeight: this.itemDiv.getBoundingClientRect().height,
+    });
   }
 
   initState(chartHeight, colors, data) {
@@ -65,8 +80,8 @@ class DonutCard extends React.Component { // eslint-disable-line react/prefer-st
     data.sort((a, b) => a.y < b.y);
 
     return (
-      <div className={styles.donutCard}>
-        <div ref={itemDiv => { this.itemDiv = itemDiv; }} className={styles.items}>
+      <div ref={itemDiv => { this.itemDiv = itemDiv; }} className={styles.donutCard}>
+        <div className={styles.items}>
           {data ?
             data.map((item, i) => (
               <div key={i} className={styles.item} style={{ color: colors[i] }}>{item.x}</div>
