@@ -3,14 +3,14 @@
   align-items: center;
   background-color: transparent;
   position: absolute;
-  bottom: 5px;
+  bottom: 1px;
   right: 45px;
+  height: 100%;
 }
 
 .items {
   flex: 1;
   margin-right: 5px;
-  height: 100%;
 }
 
 .item {

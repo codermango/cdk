@@ -6,7 +6,6 @@ import InfoCard from '../InfoCard';
 import DonutCard from '../DonutCard';
 import { storiesOf } from '@kadira/storybook';
 
-import happyIcon from './images/happy_smiley.png';
 
 const numberData = {
   title: 'active viewers',

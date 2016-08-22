@@ -1,5 +1,4 @@
 .infoCard { /* stylelint-ignore */
-  /*flex: 1;*/
   background-color: #2A3B4C;
   padding: 1% 1% 0.5%;
   margin: 0.2%;
@@ -9,7 +8,6 @@
 }
 
 .title {
-  /*margin: 0 0 20px;*/
   color: #518B9B;
   text-transform: uppercase;
   font-weight: 100;
