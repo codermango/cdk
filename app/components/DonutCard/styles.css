@@ -1,23 +1,22 @@
 .donutCard { /* stylelint-ignore */
   display: flex;
-  background-color: #2B3B4C;
-  padding: 10px;
-  position: relative;
+  align-items: center;
+  background-color: transparent;
+  position: absolute;
+  bottom: 1px;
+  right: 45px;
+  height: 100%;
 }
 
 .items {
   flex: 1;
   margin-right: 5px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .item {
   width: 100%;
   text-align: right;
-  font-size: 0.8vw;
+  font-size: 0.7vw;
 }
 
 .chart {
