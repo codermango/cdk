@@ -4,13 +4,18 @@
   background-color: transparent;
   position: absolute;
   bottom: 1px;
-  right: 45px;
+  right: 15%;
   height: 100%;
 }
 
 .items {
   flex: 1;
   margin-right: 5px;
+  padding-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
 }
 
 .item {
@@ -31,9 +36,35 @@
 }
 
 .highlightTitle {
-  font-size: 0.7vw;
+  font-size: 1vw;
 }
 
 .highlightValue {
-  font-size: 1vw;
+  font-size: 1.5vw;
+}
+
+@media screen and (max-width: 760px) {
+  .donutCard {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    position: absolute;
+    bottom: 1px;
+    right: 5%;
+    height: 100%;
+  }
+
+  .item {
+    width: 100%;
+    text-align: right;
+    font-size: 5.32px;
+  }
+
+  .highlightTitle {
+    font-size: 7.6px;
+  }
+
+  .highlightValue {
+    font-size: 11.4px;
+  }
 }
