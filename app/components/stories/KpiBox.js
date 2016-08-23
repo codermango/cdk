@@ -1,7 +1,8 @@
 /**
- * Created by mark on 8/17/16.
+ * Created by mark on 8/23/16.
  */
 import React from 'react';
+import KpiBox from '../KpiBox';
 import InfoCard from '../InfoCard';
 import DonutCard from '../DonutCard';
 import { storiesOf } from '@kadira/storybook';
@@ -35,21 +36,15 @@ const chartData = {
   ],
 };
 
-storiesOf('InfoCard', module)
-  .add('number text view', () => (
-    <div style={{ display: 'flex' }}>
+storiesOf('KpiBox', module)
+  .add('default', () => (
+    <KpiBox>
       <InfoCard data={numberData} type="number" />
-    </div>
-  ))
-  .add('time text view', () => (
-    <div style={{ display: 'flex' }}>
+      <InfoCard data={numberData} type="number" />
       <InfoCard data={timeData} type="time" />
-    </div>
-  ))
-  .add('chart view', () => (
-    <div style={{ display: 'flex' }}>
+      <InfoCard data={numberData} type="number" />
       <InfoCard data={chartData} type="chart">
         <DonutCard />
       </InfoCard>
-    </div>
+    </KpiBox>
   ));

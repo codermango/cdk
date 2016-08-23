@@ -14,4 +14,5 @@ import './MovieList';
 // import './PersonaRow';
 // import './PersonaTableHeader';
 import './PersonaTable';
-import './InfoCard';
+// import './InfoCard';
+import './KpiBox';

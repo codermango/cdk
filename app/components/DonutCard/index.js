@@ -38,7 +38,7 @@ class DonutCard extends React.Component { // eslint-disable-line react/prefer-st
     window.addEventListener('resize', this.resize, false);
     const { data } = this.props;
     data.sort((a, b) => a.y < b.y);
-    const chartHeight = this.itemDiv.getBoundingClientRect().height;
+    const chartHeight = this.itemDiv.getBoundingClientRect().height * 0.9;
     const colors = this.generateColors(this.props.data.length);
     this.initState(chartHeight, colors, data);
   }
@@ -49,7 +49,7 @@ class DonutCard extends React.Component { // eslint-disable-line react/prefer-st
 
   resize() {
     this.setState({
-      svgHeight: this.itemDiv.getBoundingClientRect().height,
+      svgHeight: this.itemDiv.getBoundingClientRect().height * 0.9,
     });
   }
 
@@ -88,7 +88,7 @@ class DonutCard extends React.Component { // eslint-disable-line react/prefer-st
           }
         </div>
         <div className={styles.chart}>
-          <svg viewBox="0 0 75 75" style={{ height: this.state.svgHeight - 20 }}>
+          <svg viewBox="0 0 75 75" style={{ height: this.state.svgHeight }}>
             <VictoryPie
               standalone={false}
               padding={0}
@@ -124,8 +124,8 @@ class DonutCard extends React.Component { // eslint-disable-line react/prefer-st
             className={styles.highlight}
             style={{
               color: this.state.textColor,
-              width: this.state.svgHeight - 20,
-              marginLeft: -this.state.svgHeight + 20,
+              width: this.state.svgHeight,
+              marginLeft: -this.state.svgHeight,
             }}
           >
             <div className={styles.highlightTitle}>{this.state.textData.x}</div>
