@@ -27,7 +27,7 @@
   border-top: 0.8vw solid #346692;
 }
 
-@media screen and (max-device-width: 1200px) {
+@media screen and (max-width: 1200px) {
   .colHeader {
     height: 100%;
     display: flex;
@@ -45,5 +45,9 @@
     border-left: 4px solid transparent;
     border-right: 4px solid transparent;
     border-top: 8px solid #346692;
+  }
+
+  .posterDiv {
+    width: 180px !important;
   }
 }
