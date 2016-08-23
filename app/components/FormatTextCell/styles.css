@@ -35,3 +35,21 @@
 .img {
   width: 100%;
 }
+
+@media screen and (max-device-width: 1200px) {
+  .mainText {
+    font-size: 14px;
+  }
+
+  .subText {
+    font-size: 13px;
+  }
+
+  .number {
+    font-size: 16px;
+  }
+
+  .icon {
+    width: 16px;
+  }
+}

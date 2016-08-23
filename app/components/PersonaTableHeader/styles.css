@@ -1,7 +1,8 @@
 .personaTableHeader { /* stylelint-ignore */
   display: flex;
   justify-content: space-around;
-  height: 4vw;
+  height: 3vw;
+  min-height: 36px;
   overflow: hidden;
   border-top: 1px solid #CBCACF;
   border-bottom: 1px solid #CBCACF;
@@ -24,4 +25,25 @@
   border-left: 0.4vw solid transparent;
   border-right: 0.4vw solid transparent;
   border-top: 0.8vw solid #346692;
+}
+
+@media screen and (max-device-width: 1200px) {
+  .colHeader {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    color: #346692;
+    font-size: 10px;
+  }
+
+  .arrow {
+    width: 0;
+    height: 0;
+    margin: 0 3%;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 8px solid #346692;
+  }
 }

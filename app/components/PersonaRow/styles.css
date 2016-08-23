@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-around;
   height: 5vw;
+  min-height: 60px;
   overflow: hidden;
   border-bottom: 1px solid #CBCACF;
 }
@@ -11,4 +12,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media screen and (max-device-width: 1200px) {
+  .posterDiv {
+    width: 180px !important;
+  }
 }
