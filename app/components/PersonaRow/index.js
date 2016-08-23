@@ -30,7 +30,7 @@ function PersonaRow(props) {
       <div className={styles.cellWrapper} style={{ width: '20%' }}> {/* 300px */}
         <FormatTextCell data={data.avgViewingTime} type="time" />
       </div>
-      <div className={styles.cellWrapper} style={{ width: '10%' }} > {/* 180px */}
+      <div className={`${styles.cellWrapper} ${styles.posterDiv}`} style={{ width: '10%' }} > {/* 180px */}
         <PosterCell data={data.posters} />
       </div>
       <div className={styles.cellWrapper} style={{ width: '20%' }}> {/* 300px */}
