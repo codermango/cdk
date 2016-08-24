@@ -44,7 +44,7 @@ function PersonaRow(props) {
       <div className={`${styles.cellWrapper} ${styles.posterDiv}`} style={{ width: '15%' }} >
         <PosterCell data={data.posters} />
       </div>
-      <div className={styles.cellWrapper} style={{ width: '5%' }}>
+      <div className={styles.cellWrapper} style={{ width: '10%' }}>
         <TextCell data={data.device} type="text" />
       </div>
       {/*

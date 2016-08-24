@@ -33,7 +33,7 @@ function PersonaTableHeader() {
       <div className={`${styles.colHeader} ${styles.posterDiv}`} style={{ width: '15%' }}>
         <div className={styles.title}>top titles</div>
       </div>
-      <div className={styles.colHeader} style={{ width: '5%' }}>
+      <div className={styles.colHeader} style={{ width: '10%' }}>
         <div className={styles.title}>device</div>
       </div>
       {/*
