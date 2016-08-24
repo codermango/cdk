@@ -51,8 +51,8 @@ class ChartCard extends React.Component { // eslint-disable-line react/prefer-st
     return (
       <div className={styles.chartCard}>
         <div className={styles.header}>
-          <h3 className={styles.chartHeader}>{title}</h3>
-          <span className={styles.chartDescription}>{description}</span>
+          <div className={styles.chartHeader}>{title}</div>
+          <div className={styles.chartDescription}>{description}</div>
         </div>
         <div className={styles.body} ref={body => { this.body = body; }} style={{ height: '300px' }}>
           {loading ?

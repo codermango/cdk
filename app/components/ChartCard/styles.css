@@ -8,7 +8,7 @@
 }
 
 .body {
-  padding: 15px 20px;
+  padding: 1% 2%;
   flex: 1;
   position: relative;
   overflow: auto;
@@ -16,19 +16,17 @@
 
 .header {
   background-color: #F8F8F8;
-  padding: 15px 20px;
-  line-height: 1em;
+  padding: 1% 2%;
 }
 
 .chartHeader {
   text-transform: uppercase;
-  font-weight: 400;
+  font-size: 1.5vw;
   margin: 0;
 }
 
 .chartDescription {
-  font-weight: 300;
-  font-size: 0.6em;
+  font-size: 0.8vw;
 }
 
 .loading {
