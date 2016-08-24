@@ -18,28 +18,28 @@ function PersonaRow(props) {
   const className = props.className ? props.className : styles.personaRow;
   return (
     <div className={className}>
-      <div className={styles.cellWrapper} style={{ width: '10%' }}> {/* 150px */}
+      <div className={styles.cellWrapper} style={{ width: '10%' }}>
         <TextCell data={data.size} type="percentage" />
       </div>
-      <div className={styles.cellWrapper} style={{ width: '10%' }}> {/* 100px */}
+      <div className={styles.cellWrapper} style={{ width: '10%' }}>
         <IconCell data={data.status} />
       </div>
-      <div className={styles.cellWrapper} style={{ width: '10%' }}> {/* 150px */}
+      <div className={styles.cellWrapper} style={{ width: '10%' }}>
         <FormatTextCell data={data.arpu} type="currency" />
       </div>
-      <div className={styles.cellWrapper} style={{ width: '20%' }}> {/* 300px */}
+      <div className={styles.cellWrapper} style={{ width: '20%' }}>
         <FormatTextCell data={data.avgViewingTime} type="time" />
       </div>
-      <div className={`${styles.cellWrapper} ${styles.posterDiv}`} style={{ width: '10%' }} > {/* 180px */}
+      <div className={`${styles.cellWrapper} ${styles.posterDiv}`} style={{ width: '15%' }} >
         <PosterCell data={data.posters} />
       </div>
-      <div className={styles.cellWrapper} style={{ width: '20%' }}> {/* 300px */}
+      <div className={styles.cellWrapper} style={{ width: '20%' }}>
         <TextCell data={data.desc} type="text" />
       </div>
-      <div className={styles.cellWrapper} style={{ width: '10%' }}> {/* 150px */}
+      <div className={styles.cellWrapper} style={{ width: '5%' }}>
         <TextCell data={data.device} type="text" />
       </div>
-      <div className={styles.cellWrapper} style={{ width: '10%' }}> {/* 150px */}
+      <div className={styles.cellWrapper} style={{ width: '10%' }}>
         <TextCell data={data.primeTime} type="time" />
       </div>
     </div>

@@ -1,46 +1,44 @@
-.textCell { /* stylelint-ignore */
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 5% 1%;
-  color: #ADB6BB;
-  font-size: 0.8vw;
-  height: 100%;
-}
-
-.text {
-  padding: 0 10%;
-  font-size: 0.8vw;
-}
-
-.percentage {
-  font-size: 1.5vw;
-  color: #000;
-}
-
-@media screen and (max-width: 1200px) {
-  .textCell {
-    box-sizing: border-box;
+@media screen and (min-width: 1025px) {
+  .textCell { /* stylelint-ignore */
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 2px 1px;
     color: #ADB6BB;
-    font-size: 10px;
+    font-size: 0.8vw;
+    height: 100%;
+  }
+
+  .text {
+    padding: 0 10%;
+    font-size: 0.8vw;
+  }
+
+  .percentage {
+    font-size: 1.5vw;
+    color: #000;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .textCell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ADB6BB;
+    font-size: 8.192px;
     height: 100%;
     overflow: hidden;
   }
 
   .percentage {
-    font-size: 16px;
+    font-size: 15.36px;
     color: #000;
   }
 
   .text {
     padding: 0 10%;
-    font-size: 10px;
+    font-size: 8.192px;
   }
 }
