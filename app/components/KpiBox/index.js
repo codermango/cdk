@@ -17,4 +17,8 @@ function KpiBox(props) {
   );
 }
 
+KpiBox.propTypes = {
+  children: React.PropTypes.node,
+};
+
 export default KpiBox;

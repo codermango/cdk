@@ -1,12 +1,12 @@
 .personaTable { /* stylelint-ignore */
-  min-width: 760px;
+  min-width: 768px;
 }
 
 .personaRow:nth-of-type(even) {
   display: flex;
   justify-content: space-around;
   height: 5vw;
-  min-height: 60px;
+  min-height: 51.2px;
   background-color: #FBFCFE;
   overflow: hidden;
   border-bottom: 1px solid #CBCACF;
@@ -16,7 +16,7 @@
   display: flex;
   justify-content: space-around;
   height: 5vw;
-  min-height: 60px;
+  min-height: 51.2px;
   overflow: hidden;
   border-bottom: 1px solid #CBCACF;
 }

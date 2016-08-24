@@ -1,33 +1,45 @@
-.personaTableHeader { /* stylelint-ignore */
-  display: flex;
-  justify-content: space-around;
-  height: 3vw;
-  min-height: 36px;
-  overflow: hidden;
-  border-top: 1px solid #CBCACF;
-  border-bottom: 1px solid #CBCACF;
+@media screen and (min-width: 1025px) {
+  .personaTableHeader { /* stylelint-ignore */
+    display: flex;
+    justify-content: space-around;
+    height: 3vw;
+    min-height: 36px;
+    overflow: hidden;
+    border-top: 1px solid #CBCACF;
+    border-bottom: 1px solid #CBCACF;
+  }
+
+  .colHeader {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    color: #346692;
+    font-size: 1vw;
+  }
+
+  .arrow {
+    width: 0;
+    height: 0;
+    margin: 0 3%;
+    border-left: 0.4vw solid transparent;
+    border-right: 0.4vw solid transparent;
+    border-top: 0.8vw solid #346692;
+  }
 }
 
-.colHeader {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-transform: uppercase;
-  color: #346692;
-  font-size: 1vw;
-}
+@media screen and (max-width: 1024px) {
+  .personaTableHeader { /* stylelint-ignore */
+    display: flex;
+    justify-content: space-around;
+    height: 3vw;
+    min-height: 36px;
+    overflow: hidden;
+    border-top: 1px solid #CBCACF;
+    border-bottom: 1px solid #CBCACF;
+  }
 
-.arrow {
-  width: 0;
-  height: 0;
-  margin: 0 3%;
-  border-left: 0.4vw solid transparent;
-  border-right: 0.4vw solid transparent;
-  border-top: 0.8vw solid #346692;
-}
-
-@media screen and (max-width: 1200px) {
   .colHeader {
     height: 100%;
     display: flex;
@@ -48,6 +60,6 @@
   }
 
   .posterDiv {
-    width: 180px !important;
+    width: 175px !important;
   }
 }

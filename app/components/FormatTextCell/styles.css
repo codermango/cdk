@@ -1,55 +1,79 @@
-.formatTextCell { /* stylelint-ignore */
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: #ADB6BB;
-  height: 100%;
-}
-
-.icon {
-  width: 1.6vw;
-}
-
-.text {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.mainText {
-  font-size: 1.3vw;
-}
-
-.subText {
-  font-size: 1.2vw;
-}
-
-.number {
-  font-size: 1.5vw;
-}
-
-.img {
-  width: 100%;
-}
-
-@media screen and (max-width: 1200px) {
-  .mainText {
-    font-size: 14px;
+@media screen and (min-width: 1025px) {
+  .formatTextCell { /* stylelint-ignore */
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ADB6BB;
+    height: 100%;
   }
 
-  .subText {
-    font-size: 13px;
-  }
-
-  .number {
-    font-size: 16px;
+  .text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .icon {
-    width: 16px;
+    width: 1.6vw;
+  }
+
+  .mainText {
+    font-size: 1.3vw;
+  }
+
+  .subText {
+    font-size: 1.2vw;
+  }
+
+  .number {
+    font-size: 1.5vw;
+  }
+
+  .img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .formatTextCell { /* stylelint-ignore */
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ADB6BB;
+    height: 100%;
+  }
+
+  .text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .mainText {
+    font-size: 13.312px;
+  }
+
+  .subText {
+    font-size: 12.288px;
+  }
+
+  .number {
+    font-size: 15.36px;
+  }
+
+  .icon {
+    width: 16.384px;
+  }
+
+  .img {
+    width: 100%;
   }
 }
