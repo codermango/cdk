@@ -33,6 +33,12 @@ function FormatTextCell(props) {
         <span className={styles.number}>{data.amount}</span>sek
       </div>
     );
+  } else if (type === 'number') {
+    mainTextDiv = (
+      <div className={styles.mainText}>
+        <span className={styles.number}>{data.number}</span>
+      </div>
+    );
   }
   return (
     <div className={styles.formatTextCell}>

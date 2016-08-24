@@ -19,6 +19,10 @@
     font-size: 1vw;
   }
 
+  .title {
+    text-align: center;
+  }
+
   .arrow {
     width: 0;
     height: 0;
@@ -48,6 +52,10 @@
     text-transform: uppercase;
     color: #346692;
     font-size: 10px;
+  }
+
+  .title {
+    text-align: center;
   }
 
   .arrow {
