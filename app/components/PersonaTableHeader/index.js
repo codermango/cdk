@@ -12,30 +12,35 @@ import styles from './styles.css';
 function PersonaTableHeader() {
   return (
     <div className={styles.personaTableHeader}>
-      <div className={styles.colHeader} style={{ width: '10%' }}>
-        size<div className={styles.arrow}></div>
+      <div className={styles.colHeader} style={{ width: '20%' }}>
+        <div className={styles.title}>description</div>
       </div>
       <div className={styles.colHeader} style={{ width: '10%' }}>
-        status
+        <div className={styles.title}>size</div>
+        <div className={styles.arrow}></div>
       </div>
       <div className={styles.colHeader} style={{ width: '10%' }}>
-        arpu<div className={styles.arrow}></div>
+        <div className={styles.title}>unique viewers</div>
+      </div>
+      <div className={styles.colHeader} style={{ width: '15%' }}>
+        <div className={styles.title}>avg finished movies</div>
+        <div className={styles.arrow}></div>
       </div>
       <div className={styles.colHeader} style={{ width: '20%' }}>
-        avg viewing time<div className={styles.arrow}></div>
+        <div className={styles.title}>avg viewing time</div>
+        <div className={styles.arrow}></div>
       </div>
       <div className={`${styles.colHeader} ${styles.posterDiv}`} style={{ width: '15%' }}>
-        top titles
-      </div>
-      <div className={styles.colHeader} style={{ width: '20%' }}>
-        description
+        <div className={styles.title}>top titles</div>
       </div>
       <div className={styles.colHeader} style={{ width: '5%' }}>
-        device
+        <div className={styles.title}>device</div>
       </div>
+      {/*
       <div className={styles.colHeader} style={{ width: '10%' }}>
         prime time
       </div>
+      */}
     </div>
   );
 }

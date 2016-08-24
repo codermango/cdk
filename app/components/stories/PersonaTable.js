@@ -30,6 +30,14 @@ const data = {
     weekday: 17.19,
     weekend: 20.07,
   },
+  uniqueViewers: {
+    number: 45,
+    change: -12,
+  },
+  avgFinishedMovies: {
+    number: 34,
+    change: 11,
+  },
 };
 
 storiesOf('PersonaTable', module)
