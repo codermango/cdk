@@ -23,13 +23,30 @@
     text-align: center;
   }
 
-  .arrow {
+  .descArrow {
     width: 0;
     height: 0;
     margin: 0 3%;
     border-left: 0.4vw solid transparent;
     border-right: 0.4vw solid transparent;
     border-top: 0.8vw solid #346692;
+  }
+
+  .descArrow:hover {
+    cursor: pointer;
+  }
+
+  .ascArrow {
+    width: 0;
+    height: 0;
+    margin: 0 3%;
+    border-left: 0.4vw solid transparent;
+    border-right: 0.4vw solid transparent;
+    border-bottom: 0.8vw solid #346692;
+  }
+
+  .ascArrow:hover {
+    cursor: pointer;
   }
 }
 
@@ -58,13 +75,30 @@
     text-align: center;
   }
 
-  .arrow {
+  .descArrow {
     width: 0;
     height: 0;
     margin: 0 3%;
     border-left: 4px solid transparent;
     border-right: 4px solid transparent;
     border-top: 8px solid #346692;
+  }
+
+  .descArrow:hover {
+    cursor: pointer;
+  }
+
+  .ascArrow {
+    width: 0;
+    height: 0;
+    margin: 0 3%;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 8px solid #346692;
+  }
+
+  .ascArrow:hover {
+    cursor: pointer;
   }
 
   .posterDiv {
