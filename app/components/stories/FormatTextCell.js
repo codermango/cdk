@@ -6,13 +6,12 @@ import FormatTextCell from '../FormatTextCell';
 import { storiesOf } from '@kadira/storybook';
 
 const timeData = {
-  min: 34,
-  sec: 13,
+  value: 3232,
   change: -11,
 };
 
 const currencyData = {
-  amount: 45,
+  value: 45,
   change: 12,
 };
 

@@ -14,35 +14,28 @@ function FormatTextCell(props) {
   const { type, data } = props;
   const percentageText = data.change > 0 ? `+${data.change}%` : `${data.change}%`;
   const percentageColor = data.change > 0 ? '#3FA650' : '#D73938';
-  let iconDiv = '';
   let mainTextDiv = '';
   if (type === 'time') {
-    // iconDiv = (
-    //   <div className={styles.icon}>
-    //     <img className={styles.img} src={clockIcon} alt="clock" />
-    //   </div>
-    // );
     mainTextDiv = (
       <div className={styles.mainText}>
-        <span className={styles.number}>{data.min}</span>min <span className={styles.number}>{data.sec}</span>sec
+        <span className={styles.number}>{Math.round(data.value / 60)}</span>min <span className={styles.number}>{Math.round(data.value % 60)}</span>sec
       </div>
     );
   } else if (type === 'currency') {
     mainTextDiv = (
       <div className={styles.mainText}>
-        <span className={styles.number}>{data.amount}</span>sek
+        <span className={styles.number}>{data.value}</span>sek
       </div>
     );
   } else if (type === 'number') {
     mainTextDiv = (
       <div className={styles.mainText}>
-        <span className={styles.number}>{data.number}</span>
+        <span className={styles.number}>{data.value}</span>
       </div>
     );
   }
   return (
     <div className={styles.formatTextCell}>
-      {iconDiv}
       <div className={styles.text}>
         {mainTextDiv}
         <div className={styles.subText} style={{ color: percentageColor }}>
@@ -55,15 +48,12 @@ function FormatTextCell(props) {
 
 FormatTextCell.propTypes = {
   type: React.PropTypes.string,
-  data: React.PropTypes.oneOfType([
-    React.PropTypes.number,
-    React.PropTypes.object,
-  ]),
+  data: React.PropTypes.object,
 };
 
 FormatTextCell.defaultProps = {
   data: {
-    number: 3,
+    value: 3,
     change: 11,
   },
   type: 'number',

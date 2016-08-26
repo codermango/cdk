@@ -9,7 +9,6 @@ import { storiesOf } from '@kadira/storybook';
 
 
 const numberData = {
-  title: 'active viewers',
   number: 17.344,
   unit: 'sek',
   subText: 'DECREASE -11%',
@@ -17,7 +16,6 @@ const numberData = {
 };
 
 const timeData = {
-  title: 'avg viewing time',
   min: 21,
   sec: 33,
   subText: 'INCREASE -11%',
@@ -25,7 +23,6 @@ const timeData = {
 };
 
 const chartData = {
-  title: 'device',
   data: [
     { x: 'iPad', y: 3 },
     { x: 'iPhone', y: 5 },
@@ -39,11 +36,11 @@ const chartData = {
 storiesOf('KpiBox', module)
   .add('default', () => (
     <KpiBox>
-      <InfoCard data={numberData} type="number" />
-      <InfoCard data={numberData} type="number" />
-      <InfoCard data={timeData} type="time" />
-      <InfoCard data={numberData} type="number" />
-      <InfoCard data={chartData} type="chart">
+      <InfoCard title="active viewers" data={numberData} type="number" />
+      <InfoCard title="avg viewing time" data={numberData} type="number" />
+      <InfoCard title="avg viewing time" data={timeData} type="time" />
+      <InfoCard title="avg viewing time" data={numberData} type="number" />
+      <InfoCard title="device" data={chartData} type="chart">
         <DonutCard />
       </InfoCard>
     </KpiBox>

@@ -7,6 +7,7 @@
   min-height: 75px;
   position: relative;
   box-sizing: border-box;
+  max-width: 330px;
 }
 
 .title {
@@ -35,7 +36,7 @@
   font-size: 1vw;
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 768px) {
   .title {
     color: #518B9B;
     text-transform: uppercase;

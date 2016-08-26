@@ -10,6 +10,10 @@ import styles from './styles.css';
 
 class PersonaTableHeader extends React.Component {
 
+  static defaultProps = {
+    sortRow: () => {},
+  };
+
   static propTypes = {
     sortRow: React.PropTypes.func,
   };
@@ -24,10 +28,10 @@ class PersonaTableHeader extends React.Component {
   }
 
   arrowClicked(evt) {
-    const title = evt.currentTarget.getAttribute('name');
-    const order = this.state[title] === 'desc' ? 'asc' : 'desc';
-    this.setState({ [title]: this.state[title] === 'desc' ? 'asc' : 'desc' });
-    this.props.sortRow(title, order);
+    const name = evt.currentTarget.getAttribute('name');
+    const order = this.state[name] === 'desc' ? 'asc' : 'desc';
+    this.setState({ [name]: this.state[name] === 'desc' ? 'asc' : 'desc' });
+    this.props.sortRow(name, order);
   }
 
   render() {
@@ -35,7 +39,6 @@ class PersonaTableHeader extends React.Component {
     const uniqueViewersStyle = this.state.uniqueViewers === 'desc' ? styles.descArrow : styles.ascArrow;
     const avgFinishedMoviesStyle = this.state.avgFinishedMovies === 'desc' ? styles.descArrow : styles.ascArrow;
     const avgViewingTimeStyle = this.state.avgViewingTime === 'desc' ? styles.descArrow : styles.ascArrow;
-
     return (
       <div className={styles.personaTableHeader}>
         <div className={styles.colHeader} style={{ width: '20%' }}>
@@ -63,16 +66,30 @@ class PersonaTableHeader extends React.Component {
         <div className={styles.colHeader} style={{ width: '10%' }}>
           <div className={styles.title}>device</div>
         </div>
-        {/*
-         <div className={styles.colHeader} style={{ width: '10%' }}>
-         prime time
-         </div>
-         */}
+        {/* data ?
+          data.map((item, i) => {
+            if (item.sortable) {
+              const className = this.state[item.name] === 'desc' ? styles.descArrow : styles.ascArrow;
+              return (
+                <div key={i} className={styles.colHeader} style={{ width: item.width }}>
+                  <div className={styles.title}>{item.title}</div>
+                  <div name={item.name} className={className} onClick={(evt) => this.arrowClicked(evt)}></div>
+                </div>
+              );
+            } else {
+              return (
+                <div key={i} className={styles.colHeader} style={{ width: item.width }}>
+                  <div className={styles.title}>{item.title}</div>
+                </div>
+              );
+            }
+          })
+          :
+          ''
+        */}
       </div>
     );
   }
-
-
 }
 
 export default PersonaTableHeader;
