@@ -19,7 +19,7 @@ function PersonaRow(props) {
   return (
     <div className={className}>
       <div className={styles.cellWrapper} style={{ width: '20%' }}>
-        <TextCell data={data.desc} type="text" />
+        <TextCell data={data.desc} />
       </div>
       <div className={styles.cellWrapper} style={{ width: '10%' }}>
         <TextCell data={data.size} type="percentage" />
@@ -37,7 +37,7 @@ function PersonaRow(props) {
         <PosterCell data={data.posters} />
       </div>
       <div className={styles.cellWrapper} style={{ width: '10%' }}>
-        <TextCell data={data.device} type="text" />
+        <TextCell data={data.device} />
       </div>
     </div>
   );
@@ -50,21 +50,20 @@ PersonaRow.propTypes = {
 
 PersonaRow.defaultProps = {
   data: {
-    size: 34,
+    size: '34%',
     avgViewingTime: {
-      min: 123,
-      sec: 23,
+      value: 7403,
       change: -11,
     },
     posters: [defaultPoster, defaultPoster, defaultPoster],
     desc: 'Mainstream action, advanture, comedy with high speed and mixed colors',
     device: 'iPad',
     uniqueViewers: {
-      number: 46,
+      value: 46,
       change: -12,
     },
     avgFinishedMovies: {
-      number: 3,
+      value: 3,
       change: 11,
     },
   },
