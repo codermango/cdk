@@ -8,7 +8,7 @@ import React from 'react';
 
 
 import styles from './styles.css';
-import clockIcon from '../stories/images/clock.png';
+// import clockIcon from '../stories/images/clock.png';
 
 function FormatTextCell(props) {
   const { type, data } = props;
@@ -17,11 +17,11 @@ function FormatTextCell(props) {
   let iconDiv = '';
   let mainTextDiv = '';
   if (type === 'time') {
-    iconDiv = (
-      <div className={styles.icon}>
-        <img className={styles.img} src={clockIcon} alt="clock" />
-      </div>
-    );
+    // iconDiv = (
+    //   <div className={styles.icon}>
+    //     <img className={styles.img} src={clockIcon} alt="clock" />
+    //   </div>
+    // );
     mainTextDiv = (
       <div className={styles.mainText}>
         <span className={styles.number}>{data.min}</span>min <span className={styles.number}>{data.sec}</span>sec
@@ -59,6 +59,14 @@ FormatTextCell.propTypes = {
     React.PropTypes.number,
     React.PropTypes.object,
   ]),
+};
+
+FormatTextCell.defaultProps = {
+  data: {
+    number: 3,
+    change: 11,
+  },
+  type: 'number',
 };
 
 export default FormatTextCell;

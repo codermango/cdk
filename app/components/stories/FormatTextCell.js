@@ -17,13 +17,18 @@ const currencyData = {
 };
 
 storiesOf('FormatTextCell', module)
-  .add('with icon', () => (
+  .add('default', () => (
     <div style={{ width: '300px', height: '100px' }}>
-      <FormatTextCell type="time" data={timeData} />
+      <FormatTextCell />
     </div>
   ))
-  .add('without icon', () => (
+  .add('with currency data', () => (
     <div style={{ width: '300px', height: '100px' }}>
       <FormatTextCell type="currency" data={currencyData} />
+    </div>
+  ))
+  .add('with time data', () => (
+    <div style={{ width: '300px', height: '100px' }}>
+      <FormatTextCell type="time" data={timeData} />
     </div>
   ));

@@ -43,4 +43,9 @@ TextCell.propTypes = {
   type: React.PropTypes.string,
 };
 
+TextCell.defaultProps = {
+  data: 'Mainstream action, advanture, comedy with high speed and mixed colors',
+  type: 'text',
+};
+
 export default TextCell;
