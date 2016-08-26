@@ -61,4 +61,12 @@ FormatTextCell.propTypes = {
   ]),
 };
 
+FormatTextCell.defaultProps = {
+  data: {
+    number: 3,
+    change: 11,
+  },
+  type: 'number',
+};
+
 export default FormatTextCell;

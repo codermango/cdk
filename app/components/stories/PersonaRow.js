@@ -30,10 +30,23 @@ const data = {
     weekday: 17.19,
     weekend: 20.07,
   },
+  uniqueViewers: {
+    number: 46,
+    change: -12,
+  },
+  avgFinishedMovies: {
+    number: 3,
+    change: 11,
+  },
 };
 
 storiesOf('PersonaRow', module)
   .add('default', () => (
+    <MuiThemeProvider>
+      <PersonaRow />
+    </MuiThemeProvider>
+  ))
+  .add('with data', () => (
     <MuiThemeProvider>
       <PersonaRow data={data} />
     </MuiThemeProvider>

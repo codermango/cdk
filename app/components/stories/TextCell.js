@@ -17,6 +17,11 @@ const data3 = {
 const data4 = 43;
 
 storiesOf('TextCell', module)
+  .add('default', () => (
+    <div style={{ width: '300px', height: '100px' }}>
+      <TextCell />
+    </div>
+  ))
   .add('description', () => (
     <div style={{ width: '300px', height: '100px' }}>
       <TextCell data={data1} type="text" />

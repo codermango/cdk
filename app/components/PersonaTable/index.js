@@ -10,9 +10,33 @@ import PersonaTableHeader from '../PersonaTableHeader';
 import PersonaRow from '../PersonaRow';
 
 import styles from './styles.css';
+import defaultPoster from './default_poster.png';
+
 
 class PersonaTable extends React.Component {
-
+  static defaultProps = {
+    data: [
+      {
+        size: 34,
+        avgViewingTime: {
+          min: 123,
+          sec: 23,
+          change: -11,
+        },
+        posters: [defaultPoster, defaultPoster, defaultPoster],
+        desc: 'Mainstream action, advanture, comedy with high speed and mixed colors.',
+        device: 'iPad',
+        uniqueViewers: {
+          number: 46,
+          change: -12,
+        },
+        avgFinishedMovies: {
+          number: 3,
+          change: 11,
+        },
+      },
+    ],
+  };
   static propTypes = {
     data: React.PropTypes.array,
   };

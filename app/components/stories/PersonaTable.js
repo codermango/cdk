@@ -12,35 +12,6 @@ import poster3 from './images/6FxOPJ9Ysilpq0IgkrMJ7PubFhq.jpg';
 import happyIcon from './images/happy_smiley.png';
 import unhappyIcon from './images/unhappy_smiley.png';
 
-// const data = {
-//   size: 34,
-//   status: happyIcon,
-//   arpu: {
-//     amount: 45,
-//     change: 12,
-//   },
-//   avgViewingTime: {
-//     min: 123,
-//     sec: 23,
-//     change: -11,
-//   },
-//   posters: [poster1, poster2, poster3],
-//   desc: 'Mainstream action, advanture, comedy with high speed and mixed colors',
-//   device: 'iPad',
-//   primeTime: {
-//     weekday: 17.19,
-//     weekend: 20.07,
-//   },
-//   uniqueViewers: {
-//     number: 45,
-//     change: -12,
-//   },
-//   avgFinishedMovies: {
-//     number: 34,
-//     change: 11,
-//   },
-// };
-
 const data = [
   {
     size: 34,
@@ -158,6 +129,11 @@ const data = [
 
 storiesOf('PersonaTable', module)
   .add('default', () => (
+    <MuiThemeProvider>
+      <PersonaTable />
+    </MuiThemeProvider>
+  ))
+  .add('with data', () => (
     <MuiThemeProvider>
       <PersonaTable data={data} />
     </MuiThemeProvider>

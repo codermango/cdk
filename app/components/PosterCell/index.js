@@ -8,6 +8,7 @@ import React from 'react';
 
 
 import styles from './styles.css';
+import defaultPoster from './default_poster.png';
 
 function PosterCell(props) {
   return (
@@ -27,6 +28,10 @@ function PosterCell(props) {
 
 PosterCell.propTypes = {
   data: React.PropTypes.array,
+};
+
+PosterCell.defaultProps = {
+  data: [defaultPoster, defaultPoster, defaultPoster],
 };
 
 export default PosterCell;
