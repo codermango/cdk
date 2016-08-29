@@ -13,6 +13,7 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import messages from './messages';
 import AreaChart from 'components/AreaChart';
+import PersonaTable from 'components/PersonaTable';
 
 export default class HomePage extends React.Component { // eslint-disable-line react/prefer-stateless-function
 
@@ -20,7 +21,7 @@ export default class HomePage extends React.Component { // eslint-disable-line r
     return (
       <h1>
         <FormattedMessage {...messages.header} />
-        <AreaChart />
+        <PersonaTable />
       </h1>
     );
   }

@@ -5,7 +5,7 @@
 */
 
 import React from 'react';
-
+import {IntlProvider, FormattedNumber, FormattedMessage} from 'react-intl';
 
 import styles from './styles.css';
 // import clockIcon from '../stories/images/clock.png';
@@ -18,7 +18,14 @@ function FormatTextCell(props) {
   if (type === 'time') {
     mainTextDiv = (
       <div className={styles.mainText}>
-        <span className={styles.number}>{Math.round(data.value / 60)}</span>min <span className={styles.number}>{Math.round(data.value % 60)}</span>sec
+        <FormattedMessage
+          id="kpi.time"
+          defaultMessage="{min}M {sec}S"
+          values={{
+            min: <span className={styles.number}>{Math.round(data.value / 60)}</span>,
+            sec: <span className={styles.number}>{Math.round(data.value % 60)}</span>,
+          }}
+        />
       </div>
     );
   } else if (type === 'currency') {
@@ -30,7 +37,11 @@ function FormatTextCell(props) {
   } else if (type === 'number') {
     mainTextDiv = (
       <div className={styles.mainText}>
-        <span className={styles.number}>{data.value}</span>
+        <span className={styles.number}>
+          <FormattedNumber
+            value={data.value}
+          />
+        </span>
       </div>
     );
   }
@@ -39,7 +50,10 @@ function FormatTextCell(props) {
       <div className={styles.text}>
         {mainTextDiv}
         <div className={styles.subText} style={{ color: percentageColor }}>
-          {percentageText}
+          <FormattedNumber
+            value={data.change}
+            style="percent"
+          />
         </div>
       </div>
     </div>
