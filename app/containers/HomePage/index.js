@@ -12,7 +12,7 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import messages from './messages';
-import AreaChart from 'components/AreaChart';
+// import AreaChart from 'components/AreaChart';
 import PersonaTable from 'components/PersonaTable';
 
 export default class HomePage extends React.Component { // eslint-disable-line react/prefer-stateless-function

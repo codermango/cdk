@@ -5,14 +5,13 @@
 */
 
 import React from 'react';
-import {IntlProvider, FormattedNumber, FormattedMessage} from 'react-intl';
+import { FormattedNumber, FormattedMessage } from 'react-intl';
 
 import styles from './styles.css';
 // import clockIcon from '../stories/images/clock.png';
 
 function FormatTextCell(props) {
   const { type, data } = props;
-  const percentageText = data.change > 0 ? `+${data.change}%` : `${data.change}%`;
   const percentageColor = data.change > 0 ? '#3FA650' : '#D73938';
   let mainTextDiv = '';
   if (type === 'time') {
