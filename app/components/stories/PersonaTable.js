@@ -3,6 +3,7 @@
  */
 import React from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import { IntlProvider } from 'react-intl';
 import PersonaTable from '../PersonaTable';
 import { storiesOf } from '@kadira/storybook';
 
@@ -88,11 +89,15 @@ const data = [
 storiesOf('PersonaTable', module)
   .add('default', () => (
     <MuiThemeProvider>
-      <PersonaTable />
+      <IntlProvider locale="en">
+        <PersonaTable />
+      </IntlProvider>
     </MuiThemeProvider>
   ))
   .add('with data', () => (
     <MuiThemeProvider>
-      <PersonaTable data={data} />
+      <IntlProvider locale="en">
+        <PersonaTable data={data} />
+      </IntlProvider>
     </MuiThemeProvider>
   ));

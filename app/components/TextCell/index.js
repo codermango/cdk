@@ -5,6 +5,7 @@
 */
 
 import React from 'react';
+import {FormattedMessage} from 'react-intl';
 
 import styles from './styles.css';
 
@@ -14,7 +15,10 @@ function TextCell(props) {
   return (
     <div className={styles.textCell}>
       <div className={className}>
-        {data}
+        <FormattedMessage
+          id="text"
+          defaultMessage={data}
+        />
       </div>
     </div>
   );
