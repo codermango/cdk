@@ -9,8 +9,8 @@ import React from 'react';
 import styles from './styles.css';
 
 function TextCell(props) {
-  const { data, type } = props;
-  const className = type === 'percentage' ? styles.percentage : styles.text;
+  const { data } = props;
+  const className = props.className ? props.className : styles.text;
   return (
     <div className={styles.textCell}>
       <div className={className}>
@@ -22,12 +22,12 @@ function TextCell(props) {
 
 TextCell.propTypes = {
   data: React.PropTypes.string,
-  type: React.PropTypes.string,
+  className: React.PropTypes.string,
 };
 
 TextCell.defaultProps = {
   data: 'Mainstream action, advanture, comedy with high speed and mixed colors',
-  type: 'text',
+  className: styles.text,
 };
 
 export default TextCell;

@@ -22,7 +22,7 @@ function PersonaRow(props) {
         <TextCell data={data.desc} />
       </div>
       <div className={styles.cellWrapper} style={{ width: '10%' }}>
-        <TextCell data={data.size} type="percentage" />
+        <TextCell data={data.size} className={styles.highlight} />
       </div>
       <div className={styles.cellWrapper} style={{ width: '10%' }}>
         <FormatTextCell data={data.uniqueViewers} type="number" />

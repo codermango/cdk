@@ -14,6 +14,11 @@
     justify-content: center;
     align-items: center;
   }
+
+  .highlight {
+    font-size: 1.5vw;
+    color: #000;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -31,6 +36,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .highlight {
+    font-size: 15.36px;
+    color: #000;
   }
 
   .posterDiv {
