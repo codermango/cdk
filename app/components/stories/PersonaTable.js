@@ -16,72 +16,72 @@ const data = [
     size: '34%',
     avgViewingTime: {
       value: 7403,
-      change: -11,
+      change: -0.11,
     },
     posters: [poster1, poster2, poster3],
     desc: 'Mainstream action, advanture, comedy with high speed and mixed colors.',
     device: 'iPad',
     uniqueViewers: {
       value: 46,
-      change: -12,
+      change: -0.12,
     },
     avgFinishedMovies: {
       value: 3,
-      change: 11,
+      change: 0.41,
     },
   },
   {
     size: '12%',
     avgViewingTime: {
       value: 7000,
-      change: -11,
+      change: -0.11,
     },
     posters: [poster1, poster2, poster3],
     desc: 'Family adventure with bright colors and low speed.',
     device: 'iPad',
     uniqueViewers: {
       value: 45,
-      change: -12,
+      change: -0.12,
     },
     avgFinishedMovies: {
       value: 34,
-      change: 11,
+      change: 0.11,
     },
   },
   {
     size: '56%',
     avgViewingTime: {
       value: 10000,
-      change: -11,
+      change: -0.11,
     },
     posters: [poster1, poster2, poster3],
     desc: 'High speed superhero action with dark colors.',
     device: 'STB',
     uniqueViewers: {
       value: 24,
-      change: -12,
+      change: -0.12,
     },
     avgFinishedMovies: {
       value: 34,
-      change: 11,
+      change: 0.11,
     },
   },
   {
     size: '39%',
     avgViewingTime: {
       value: 3000,
-      change: -11,
+      change: -0.11,
     },
     posters: [poster1, poster2, poster3],
     desc: 'Teenage heroin adventure movies with high speed and bright colors.',
     device: 'STB',
     uniqueViewers: {
       value: 19,
-      change: -12,
+      change: -0.12,
     },
     avgFinishedMovies: {
       value: 11,
-      change: 11,
+      change: 0.11,
     },
   },
 ];
