@@ -21,14 +21,11 @@
   padding: 20px 0 0;
   text-align: right;
   color: #FFF;
+  font-size: 1.5vw;
 }
 
 .number {
   font-size: 2.5vw;
-}
-
-.unit {
-  font-size: 1.5vw;
 }
 
 .subText {
@@ -46,10 +43,6 @@
 
   .number {
     font-size: 19px;
-  }
-
-  .unit {
-    font-size: 11.4px;
   }
 
   .subText {

@@ -5,23 +5,35 @@
 */
 
 import React from 'react';
-
+import { FormattedMessage } from 'react-intl';
 
 import styles from './styles.css';
 
 function InfoCard(props) {
-  const { title, data, type } = props;
+  const { title, data, type, colorReverse } = props;
+  const subTextColor = colorReverse ?
+    data.change < 0 ? '#009800' : '#C81916'
+    :
+    data.change > 0 ? '#009800' : '#C81916';
+
+  const subText = data.change > 0 ? `INCREASE ${Math.round(data.change * 100)}%` : `DECREASE ${Math.round(data.change * 100)}%`;
   let contentDiv = '';
-  if (type === 'number') {
+
+  if (type === 'currency') {
     contentDiv = (
       <div className={styles.infoCard}>
         <div className={styles.title}>{title}</div>
         <div className={styles.data}>
-          <span className={styles.number}>{data.number}</span>
-          <span className={styles.unit}>{data.unit}</span>
+          <FormattedMessage
+            id="kpi.currency"
+            defaultMessage="{amount}sek"
+            values={{
+              amount: <span className={styles.number}>{data.value.toFixed(2)}</span>,
+            }}
+          />
         </div>
-        <div className={styles.subText} style={{ color: data.subTextColor }}>
-          {data.subText}
+        <div className={styles.subText} style={{ color: subTextColor }}>
+          {subText}
         </div>
       </div>
     );
@@ -30,13 +42,35 @@ function InfoCard(props) {
       <div className={styles.infoCard}>
         <div className={styles.title}>{title}</div>
         <div className={styles.data}>
-          <span className={styles.number}>{data.min}</span>
-          <span className={styles.unit}>M</span>
-          <span className={styles.number}>{data.sec}</span>
-          <span className={styles.unit}>S</span>
+          <FormattedMessage
+            id="kpi.time"
+            defaultMessage="{min}M {sec}S"
+            values={{
+              min: <span className={styles.number}>{Math.round(data.value / 60)}</span>,
+              sec: <span className={styles.number}>{Math.round(data.value % 60)}</span>,
+            }}
+          />
         </div>
-        <div className={styles.subText} style={{ color: data.subTextColor }}>
-          {data.subText}
+        <div className={styles.subText} style={{ color: subTextColor }}>
+          {subText}
+        </div>
+      </div>
+    );
+  } else if (type === 'percent') {
+    contentDiv = (
+      <div className={styles.infoCard}>
+        <div className={styles.title}>{title}</div>
+        <div className={styles.data}>
+          <FormattedMessage
+            id="kpi.percent"
+            defaultMessage="{percent}%"
+            values={{
+              percent: <span className={styles.number}>{data.value.toFixed(2)}</span>,
+            }}
+          />
+        </div>
+        <div className={styles.subText} style={{ color: subTextColor }}>
+          {subText}
         </div>
       </div>
     );
@@ -44,7 +78,6 @@ function InfoCard(props) {
     contentDiv = (
       <div className={styles.infoCard}>
         <div className={styles.title}>{title}</div>
-        <div></div>
         {props.children}
       </div>
     );
@@ -53,19 +86,20 @@ function InfoCard(props) {
 }
 
 InfoCard.propTypes = {
+  title: React.PropTypes.string,
   data: React.PropTypes.object,
+  type: React.PropTypes.string,
+  colorReverse: React.PropTypes.bool,
   children: React.PropTypes.node,
 };
 
 InfoCard.defaultProps = {
   title: 'active viewers',
   data: {
-    number: 17.344,
-    unit: 'sek',
-    subText: 'DECREASE -11%',
-    subTextColor: '#C81916',
+    value: 17.344,
+    change: -0.45,
   },
-  type: 'number',
+  type: 'currency',
 };
 
 
