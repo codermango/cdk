@@ -53,18 +53,18 @@ PersonaRow.defaultProps = {
     size: '34%',
     avgViewingTime: {
       value: 7403,
-      change: -11,
+      change: -0.11,
     },
     posters: [defaultPoster, defaultPoster, defaultPoster],
     desc: 'Mainstream action, advanture, comedy with high speed and mixed colors',
     device: 'iPad',
     uniqueViewers: {
       value: 46,
-      change: -12,
+      change: -0.12,
     },
     avgFinishedMovies: {
       value: 3,
-      change: 11,
+      change: 0.11,
     },
   },
 };

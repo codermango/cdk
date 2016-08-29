@@ -27,12 +27,6 @@ function FormatTextCell(props) {
         />
       </div>
     );
-  } else if (type === 'currency') {
-    mainTextDiv = (
-      <div className={styles.mainText}>
-        <span className={styles.number}>{data.value}</span>sek
-      </div>
-    );
   } else if (type === 'number') {
     mainTextDiv = (
       <div className={styles.mainText}>

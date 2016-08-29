@@ -3,6 +3,7 @@
  */
 import React from 'react';
 import TextCell from '../TextCell';
+import { IntlProvider } from 'react-intl';
 import { storiesOf } from '@kadira/storybook';
 
 const data1 = 'Mainstream action, advanture, comedy with high speed and mixed colors';
@@ -13,22 +14,30 @@ const data4 = '43%';
 
 storiesOf('TextCell', module)
   .add('default', () => (
-    <div style={{ width: '300px', height: '100px' }}>
-      <TextCell />
-    </div>
+    <IntlProvider locale="en">
+      <div style={{ width: '300px', height: '100px' }}>
+        <TextCell />
+      </div>
+    </IntlProvider>
   ))
   .add('description', () => (
-    <div style={{ width: '300px', height: '100px' }}>
-      <TextCell data={data1} type="text" />
-    </div>
+    <IntlProvider locale="en">
+      <div style={{ width: '300px', height: '100px' }}>
+        <TextCell data={data1} type="text" />
+      </div>
+    </IntlProvider>
   ))
   .add('device', () => (
-    <div style={{ width: '300px', height: '100px' }}>
-      <TextCell data={data2} type="text" />
-    </div>
+    <IntlProvider locale="en">
+      <div style={{ width: '300px', height: '100px' }}>
+        <TextCell data={data2} type="text" />
+      </div>
+    </IntlProvider>
   ))
   .add('size', () => (
-    <div style={{ width: '300px', height: '100px' }}>
-      <TextCell data={data4} type="percentage" />
-    </div>
+    <IntlProvider locale="en">
+      <div style={{ width: '300px', height: '100px' }}>
+        <TextCell data={data4} type="percentage" />
+      </div>
+    </IntlProvider>
   ));
