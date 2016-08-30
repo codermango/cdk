@@ -1,13 +1,12 @@
 .infoCard { /* stylelint-ignore */
   background-color: #2A3B4C;
   padding: 1% 1% 0.5%;
-  margin: 0 0.2%;
+  margin: 0.2%;
   border-radius: 1vw;
   width: 100%;
   min-height: 75px;
   position: relative;
   box-sizing: border-box;
-  max-width: 330px;
 }
 
 .title {

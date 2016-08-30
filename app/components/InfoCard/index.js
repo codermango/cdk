@@ -92,7 +92,7 @@ function InfoCard(props) {
         </div>
       </div>
     );
-  }else if (type === 'chart') {
+  } else if (type === 'chart') {
     contentDiv = (
       <div className={styles.infoCard}>
         <div className={styles.title}>{title}</div>

@@ -1,4 +1,23 @@
-.kpiBox { /* stylelint-ignore */
-  display: flex;
-  min-width: 768px;
+@media screen and (min-width: 768px) {
+  .kpiBox { /* stylelint-ignore */
+    display: flex;
+    flex-direction: row;
+  }
+
+  .row {
+    width: 50%;
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .kpiBox { /* stylelint-ignore */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .row {
+    width: 100%;
+    display: flex;
+  }
 }
