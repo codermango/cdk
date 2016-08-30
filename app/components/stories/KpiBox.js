@@ -10,7 +10,7 @@ import { storiesOf } from '@kadira/storybook';
 
 
 const numberData = {
-  value: 17.344,
+  value: 17,
   change: -0.11,
 };
 
@@ -37,7 +37,7 @@ storiesOf('KpiBox', module)
   .add('default', () => (
     <IntlProvider locale="en">
       <KpiBox>
-        <InfoCard title="active viewers" data={numberData} type="currency" />
+        <InfoCard title="active viewers" data={numberData} type="number" />
         <InfoCard title="total amount" data={numberData} type="currency" />
         <InfoCard title="avg viewing time" data={timeData} type="time" />
         <InfoCard title="churn" data={churn} type="percent" colorReverse />

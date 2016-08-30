@@ -5,7 +5,7 @@
 */
 
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, FormattedNumber } from 'react-intl';
 
 import styles from './styles.css';
 
@@ -76,7 +76,23 @@ function InfoCard(props) {
         </div>
       </div>
     );
-  } else if (type === 'chart') {
+  } else if (type === 'number') {
+    contentDiv = (
+      <div className={styles.infoCard}>
+        <div className={styles.title}>{title}</div>
+        <div className={styles.data}>
+          <div className={styles.number}>
+            <FormattedNumber
+              value={data.value}
+            />
+          </div>
+        </div>
+        <div className={styles.subText} style={{ color: subTextColor }}>
+          {subText}
+        </div>
+      </div>
+    );
+  }else if (type === 'chart') {
     contentDiv = (
       <div className={styles.infoCard}>
         <div className={styles.title}>{title}</div>
