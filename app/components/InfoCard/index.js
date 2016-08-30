@@ -11,10 +11,12 @@ import styles from './styles.css';
 
 function InfoCard(props) {
   const { title, data, type, colorReverse } = props;
-  const subTextColor = colorReverse ?
-    data.change < 0 ? '#009800' : '#C81916'
-    :
-    data.change > 0 ? '#009800' : '#C81916';
+  let subTextColor = '';
+  if (colorReverse) {
+    subTextColor = data.change < 0 ? '#009800' : '#C81916';
+  } else {
+    subTextColor = data.change > 0 ? '#009800' : '#C81916';
+  }
 
   const subText = data.change > 0 ? `INCREASE ${Math.round(data.change * 100)}%` : `DECREASE ${Math.round(data.change * 100)}%`;
   let contentDiv = '';
@@ -65,7 +67,7 @@ function InfoCard(props) {
             id="kpi.percent"
             defaultMessage="{percent}%"
             values={{
-              percent: <span className={styles.number}>{data.value.toFixed(2)}</span>,
+              percent: <span className={styles.number}>{(data.value * 100).toFixed(2)}</span>,
             }}
           />
         </div>
